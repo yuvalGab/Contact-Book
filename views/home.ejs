@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="icon" href="/images/icon.png">
+</head>
+<body>
+    <div class="wrapper">
+        <% include templates/menu.ejs %>
+        <div class="main">
+            <div class="contact">
+                <div class="slide">
+                    <h1 id="headline">Contack Book</h1>
+                    <h2 id="subline">keep in touch with your's friends!</h2>
+                    <img id="icon" src="/images/icon.png">
+                </div>
+                <div class="slide" style="display:none;">
+                    <div class="status-bar">
+                        <h3>total contacts</h3>
+                        <div id="circle">
+                            <p id="status"><%= status %></p>
+                        </div>
+                    </div>
+                        <h3>contacts list</h3>
+                    <div class="list">
+                        <ol>
+                        <% for(var i=0; i< list.length; i++) {%>
+                            <li class="name"><%= list[i].firstName + " " + list[i].lastName %></li>
+                            <div class="more">
+                                email:  <%= list[i].email %> <br>
+                                phone 1: <%= list[i].phoneNumber1 %> %> <br>
+                                phone 2: <%= list[i].phoneNumber2 %> <br>
+                                comment: <%= list[i].comment %> 
+                            </div>
+                            <hr>
+                        <% } %>
+                        </ol>
+                    </div>
+                </div>
+                <div class="slide" style="display:none;">
+                    <h3>about</h3>
+                    <p id="about-text">Contact Book helps you to keep in touch with your best friends. <br>
+                    This app interface easy to use for all. <br>
+                    All rights reserved to Yuval and Sons company ©.</p>
+                    <div id="deleteAll">delete all data</div>
+                </div>
+            </div>
+            <div class="slider">
+                <p id="left-slide"><</p>
+                <div class="indicate">
+                    <div class="mark">A</div>
+                    <div class="mark">B</div>
+                    <div class="mark">C</div>
+                </div>
+                <p id="right-slide">></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/javascripts/homeScript.js"></script>
+    <script src="/javascripts/replaceScript.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+.main{
+    overflow: auto;
+}
+
+.find{
+    position: fixed;
+    background-color: #c0df9c;
+}
+
+form{
+    padding: 10px;
+}
+
+input{
+    margin: 0 auto;
+    width: 31%;
+}
+
+#find-btn{
+    border: none;
+    background-color: #9aee4b;
+    cursor: pointer;
+    color: #905e00;
+    font-size: 16px;
+}
+
+#find-btn:hover{
+    background-color: #60ec69; 
+    color: #135100;
+}
+
+#error{
+    display: none;
+    margin-top: 55px;
+    text-align: center;
+    color: red;
+    text-shadow: 1px 1px 2px white;
+    margin-bottom: 30px;
+}
+
+.outcome{
+    padding: 25px;
+    background-color: #c8ddaf;
+}
+
+.field-caption{
+    margin-top: 30px;
+    font-weight: bolder;
+}
+
+.margin-zero{
+    margin: 0;
+}
+
+.field-result{
+    display: none;
+    text-align: center;
+}
+
+.controlers{
+    padding: 20px;
+    text-align: center;
+}
+
+#edit-btn, #delete-btn{
+    display: none;
+    border: 1px solid gray;
+    background-color: #9aee4b;
+    cursor: pointer;
+    color: #905e00;
+    font-size: 22px;
+    /*padding: 10px 20px 10px 20px;*/
+    height: 50px;
+    width: 120px;
+}
+
+#edit-btn:hover, #delete-btn:hover{
+    background-color: #60ec69;
+    color: #d80505;
+}
+
+.edit{
+    display: none;
+    background-color: #d5f2b2;
+    padding: 30px;
+    font-size: 12px;
+}
+
+.edit input{
+    display: block;
+    width: 80%;
+}
+
+#save-btn{
+    margin-top: 20px;
+    width: 60%;
+    background-color: greenyellow;
+    border: 1px solid gray;
+    cursor: pointer;
+    height: 25px;
+}
+
+#save-btn:hover{
+    background-color: lawngreen;
+}

@@ -1,0 +1,40 @@
+
+.wrapper{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 400px;
+    /*border: 1px solid black;*/
+    font-family: "Verdana";
+    color: #17220a;
+    box-shadow: 2px 2px 5px #294508;
+}
+
+.main-btns{
+    float: left;
+    width: 33.3333333333333%;
+    cursor: pointer;
+    border: none;
+    border-bottom: 3px solid #8ac580;
+    background-color: #99f28b;
+    height: 50px;
+    font-size: 25px;
+    color: #294508;
+}
+
+.main-btns:hover,.main-btn-active{
+    outline: 3px solid #8ac580;
+    outline-offset: -3px;
+    background-color: #36ee19;
+    font-weight: bolder;
+}
+
+.clear{
+    clear: both;
+}
+
+.main{
+    height: 400px;
+    background-color: #c0df9c;
+    border: 3px solid #8ac580;
+    border-top: none;
+}

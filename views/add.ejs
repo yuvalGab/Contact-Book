@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/add.css">
+    <link rel="icon" href="/images/icon.png">
+</head>
+<body>
+    <div class="wrapper">
+        <% include templates/menu.ejs %>
+        <div class="main">
+            <form action="/send" method="post">
+                <p class="input-text">first name:</p>
+                <input type="text" name="firstName">
+                <p class="input-text">last name:</p>
+                <input type="text" name="lastName">
+                <p class="input-text">email:</p>
+                <input type="text" name="email">
+                <p class="input-text">phone number(1):</p>
+                <input type="text" name="phoneNumber1">
+                <p class="input-text">phone number(2):</p>
+                <input type="text" name="phoneNumber2">
+                <p class="input-text">comment:</p>
+                <input type="text" name="comment">
+                <input id="add-btn" type="submit" value="add a new contact member">
+            </form>
+        </div>
+    </div>
+    
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/javascripts/addScript.js"></script>
+    <script src="/javascripts/replaceScript.js"></script>
+    
+</body>
+</html>

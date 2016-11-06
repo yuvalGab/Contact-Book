@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="/stylesheets/global.css">
+    <link rel="stylesheet" href="/stylesheets/search.css">
+    <link rel="icon" href="/images/icon.png">
+</head>
+<body>
+    <div class="wrapper">
+        <% include templates/menu.ejs %>
+        <div class="main">
+            <div class="find">
+                <form action="/find" method="post">
+                    <input type="text" name="firstName" placeholder="first name">
+                    <input type="text" name="lastName" placeholder="last name">
+                    <input id="find-btn" type="submit" value="find">
+                </form>
+            </div>
+            <p id="error"><%= error %></p>
+            <div class="outcome">
+                <p class="field-caption margin-zero">first name:</p>
+                <p class="field-result" name="useFirstName"><%= first %></p>
+                <hr>
+                <p class="field-caption">last name:</p>
+                <p class="field-result" name="useLastName"><%= last %></p>
+                <hr>
+                <p class="field-caption">email:</p>
+                <p class="field-result"><%= email %></p>
+                <hr>
+                <p class="field-caption">phone number(1):</p>
+                <p class="field-result"><%= phone1 %></p>
+                <hr>
+                <p class="field-caption">phone number(2):</p>
+                <p class="field-result"><%= phone2 %></p>
+                <hr>
+                <p class="field-caption">comment:</p>
+                <p class="field-result"><%= comment %></p>
+                <hr>
+            </div>
+            <div class="controlers">
+                <button id="edit-btn">edit</button>
+                <button id="delete-btn">delete</button>
+            </div>
+            <div class="edit">
+                <form action="/edit" method="post">
+                    <p class="input-text">first name:</p>
+                    <input type="text" name="editFirstName">
+                    <p class="input-text">last name:</p>
+                    <input type="text" name="editLastName">
+                    <p class="input-text">email:</p>
+                    <input type="text" name="editEmail">
+                    <p class="input-text">phone number(1):</p>
+                    <input type="text" name="editPhoneNumber1">
+                    <p class="input-text">phone number(2):</p>
+                    <input type="text" name="editPhoneNumber2">
+                    <p class="input-text">comment:</p>
+                    <input type="text" name="editComment">
+                    <input id="save-btn" type="submit" value="save changing">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/javascripts/searchScript.js"></script>
+    <script src="/javascripts/replaceScript.js"></script>
+    
+</body>
+</html>
